@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { AuthContext } from '../../context/authContext'
 
 function Login() {
     const [form, setForm] = useState({
@@ -8,9 +10,26 @@ function Login() {
         password: ''
     })
 
+    const { login } = useContext(AuthContext)
+
     const changeHandler = (event) => {
         setForm({...form, [event.target.name]: event.target.value})
         console.log(form);
+    }
+
+    const loginHandler = async () => {
+        try {
+            await axios.post('/users/login', {...form}, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                login(response.data.token, response.data.userId)
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
   return (
@@ -29,7 +48,7 @@ function Login() {
                 </div>
             </div>
             <div className='row'>
-                <button className='auth__button'>Войти</button>
+                <button className='auth__button' type="submit" onClick={loginHandler}>Войти</button>
             </div>
         </form>
     </div>
