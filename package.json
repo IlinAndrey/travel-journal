@@ -20,12 +20,18 @@
   },
   "homepage": "https://github.com/IlinAndrey/travel-journal#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "concurrently": "^7.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
   }
 }
