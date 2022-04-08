@@ -7,7 +7,7 @@ const userRoute = require('./routes/users')
 
 dotenv.config()
 
-app.use(express.json())
+app.use(express.json({extended: true}))
 
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true}).then(()=>{
     console.log("MongoDB with us:)")

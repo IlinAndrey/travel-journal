@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
+    "client": "npm run --max_old_space_size=12000 start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
