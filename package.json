@@ -1,0 +1,27 @@
+{
+  "name": "travel-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlinAndrey/travel-journal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlinAndrey/travel-journal/issues"
+  },
+  "homepage": "https://github.com/IlinAndrey/travel-journal#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  }
+}
