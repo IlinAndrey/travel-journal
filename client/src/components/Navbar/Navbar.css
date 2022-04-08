@@ -1,7 +1,7 @@
 .div__nav{
     width: 100vw;
-    height: 5rem;
-    background-color: tomato;
+    height: 5vh;
+    background-color: #19191a;
 }
 
 .nav__wr{
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11.5px 50px;
+    padding: 9px 50px;
     height: 100%;
     width: 100%;
 }
@@ -17,7 +17,7 @@
 .nav__logo{
     text-decoration: none;
     color: aliceblue;
-    font-size: 40px;
+    font-size: 23px;
 }
 
 .nav__list{
