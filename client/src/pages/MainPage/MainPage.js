@@ -72,7 +72,7 @@ function MainPage() {
 
 
   return (
-    <div className='map__frame' style={{ height: "100vh", width: "100%" }}>
+    <div className='map__frame' style={{ height: "95vh", width: "100vw" }}>
       <Map
         // {...viewport}
         initialViewState={{
@@ -81,7 +81,7 @@ function MainPage() {
           zoom: 4
         }}
         // {...viewport}
-        style={{width: "100vw", height: "100vh"}}
+        style={{maxWidth: "100vw", maxHeight: "95vh"}}
         mapStyle="mapbox://styles/yougxl/ckzvdgj3h001014o5palirrer"
         // onViewportChange={(viewport) => setViewport(viewport)}
         mapboxAccessToken={MAPBOX_TOKEN}
