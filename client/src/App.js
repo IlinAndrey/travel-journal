@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 import Home from "./pages/Home"
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
-import { AuthContext } from "../src/context/AuthContext"
+import { AuthContext } from "./context/AuthContext"
 import { CircularProgress } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import red from "@material-ui/core/colors/red"
