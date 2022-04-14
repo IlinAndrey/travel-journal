@@ -38,7 +38,7 @@ export default function Home() {
     }
 
     const [viewport, setViewport] = useState({
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         latitude: 39,
         longitude: 44,
@@ -63,12 +63,12 @@ export default function Home() {
             <AppHeader handleClickOpen={handleClickOpen}/>
             <InfoModal open={modalOpen} handleClose={handleClose}/>
             <ReactMapGL
-                width="100vw" 
+                width="100%" 
                 height="100vh"
                 {...viewport}
                 mapboxApiAccessToken='pk.eyJ1IjoieW91Z3hsIiwiYSI6ImNrenVueHJubjE4dmUyb21vbDFlbHJ6MmgifQ.xrcqtzTV5exBR3oKOsucPQ'
                 onViewportChange={nextViewport => setViewport(nextViewport)}
-                mapStyle="mapbox://styles/yougxl/cl1qy3zds001s15mt5vvt1koz"
+                mapStyle="mapbox://styles/yougxl/cl1qy6tnt004n14pfedurhv5n"
                 onDblClick={currentUser && handleAddClick}
             >
                 <CurrentLocationMarker 

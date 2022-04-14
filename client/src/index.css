@@ -99,6 +99,7 @@ body{
   flex-flow: row;
 }
 
+
 .alertPrompt{
   position:'absolute';
   bottom:20;
